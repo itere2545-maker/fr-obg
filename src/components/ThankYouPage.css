@@ -1,0 +1,179 @@
+:root {
+  --bg: #0E0E12;
+  --magenta: #E6007E;
+  --pink: #ff2ea0;
+  --gold: #F2C98C;
+  --white-soft: #F8F8F8;
+}
+
+.thankyou-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--white-soft);
+}
+
+.ty-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.wave-top {
+  width: 100%;
+  background: transparent;
+}
+
+.ty-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.portrait {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(242, 201, 140, 0.5);
+  box-shadow: 0 10px 30px rgba(242, 201, 140, 0.15);
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.05) contrast(0.98) saturate(1.05);
+}
+
+.ty-title {
+  position: relative;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.ty-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 180px;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(230, 0, 126, 0.18) 0%, rgba(242, 201, 140, 0.1) 50%, transparent 80%);
+  filter: blur(26px);
+  pointer-events: none;
+}
+
+.ty-subtitle {
+  margin-top: 16px;
+  font-size: 1.15rem;
+  color: #ffcce7;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.info-item {
+  background: linear-gradient(180deg, rgba(255, 46, 160, 0.07), rgba(14, 14, 18, 0.9));
+  border: 1px solid rgba(230, 0, 126, 0.38);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(230, 0, 126, 0.6), rgba(242, 201, 140, 0.6));
+  box-shadow: 0 6px 18px rgba(230, 0, 126, 0.25);
+}
+
+.info-text {
+  font-size: 0.98rem;
+}
+
+.divider {
+  height: 2px;
+  margin: 34px 0;
+  background: linear-gradient(90deg, var(--pink), var(--gold));
+  opacity: 0.7;
+}
+
+.support-box {
+  margin-top: 10px;
+  background: linear-gradient(180deg, rgba(242, 201, 140, 0.1), rgba(14, 14, 18, 0.92));
+  border: 1px solid rgba(242, 201, 140, 0.55);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.support-title {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.support-text {
+  font-size: 1rem;
+}
+
+.inspire {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.inspire-quote {
+  font-size: 1.15rem;
+  color: #ffe6f3;
+}
+
+.signature {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-family: cursive;
+}
+
+@media (max-width: 900px) {
+  .ty-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .ty-title::after {
+    width: 300px;
+    height: 140px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ty-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.mobile-frame {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .mobile-frame {
+    display: block;
+  }
+}
