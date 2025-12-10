@@ -88,7 +88,7 @@ const ThankYouPage: React.FC = () => {
 
           <div className="inspire">
             <div className="inspire-quote">💖 Hoy comienza tu nueva historia emocional. Estoy orgullosa de ti.</div>
-            <div className="signature">Dra. Sofía</div>
+            <div className="signature">Sofía</div>
           </div>
         </div>
       </div>
