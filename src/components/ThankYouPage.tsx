@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Search, Hourglass } from 'lucide-react';
+import { Mail, Search, Hourglass, CheckCircle, MessageCircle } from 'lucide-react';
 import './ThankYouPage.css';
 
 const ThankYouPage: React.FC = () => {
@@ -30,7 +30,23 @@ const ThankYouPage: React.FC = () => {
               <p className="ty-subtitle">Revisa tu correo: ya enviamos tus datos de acceso.</p>
             </div>
             <div className="portrait">
-              <img src="https://i.imgur.com/Lr0RtSU.png" alt="Dra. Sofía" />
+              <CheckCircle className="portrait-icon" size={40} color="#ffffff" />
+            </div>
+          </div>
+
+          <div className="cta-entry">
+            <div className="cta-card">
+              <div className="cta-title">Entra ahora a la Frecuencia del Reencuentro</div>
+              <div className="cta-desc">Activa tu energía y continúa tu proceso guiado.</div>
+              <div className="cta-actions">
+                <a
+                  className="cta-btn"
+                  href="https://frecuenciareencuentro-gzon.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Entrar ahora a la Frecuencia del Reencuentro"
+                >Entrar ahora</a>
+              </div>
             </div>
           </div>
 
@@ -53,7 +69,21 @@ const ThankYouPage: React.FC = () => {
 
           <div className="support-box">
             <div className="support-title">¿No recibiste tu acceso?</div>
-            <div className="support-text">Escríbenos al soporte: [e-mail]</div>
+            <div className="support-text">Escríbenos al soporte:</div>
+            <div className="support-links">
+              <a className="support-link" href="mailto:correofdr@outlook.com" aria-label="Soporte por email">
+                <Mail size={18} color="#fff" /> correofdr@outlook.com
+              </a>
+              <a
+                className="support-link"
+                href="https://wa.me/5511961093355?text=comprei%20a%20frecuencia%20del%20reencuentro%20e%20preciso%20de%20ajuda"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Soporte por WhatsApp"
+              >
+                <MessageCircle size={18} color="#fff" /> WhatsApp: +55 11 96109-3355
+              </a>
+            </div>
           </div>
 
           <div className="inspire">
